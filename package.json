@@ -12,7 +12,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint"
+      "pre-commit": "vue-cli-service lint --no-fix"
     }
   },
   "dependencies": {
