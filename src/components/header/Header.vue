@@ -3,10 +3,13 @@
     <div class="header__logo">
       <img :src="logo" alt="logo" />
     </div>
-    <LanguageSwitcher
-      :languages="languagesConfig"
-      @change-language="onLanguageChange"
-    />
+    <div class="header__languageSwitcher">
+      <LanguageSwitcher
+        :languages="languagesConfig"
+        :active="currentLanguage"
+        @change-language="onLanguageChange"
+      />
+    </div>
   </header>
 </template>
 
@@ -28,7 +31,12 @@ export default {
   },
   methods: {
     onLanguageChange(lang) {
-      console.log("Language changed to:", lang);
+      this.$i18n.locale = lang;
+    },
+  },
+  computed: {
+    currentLanguage() {
+      return this.$i18n.locale;
     },
   },
 };

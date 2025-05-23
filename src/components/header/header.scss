@@ -4,4 +4,7 @@
   &__logo {
     @include flex-center;
   }
+  &__languageSwitcher {
+    @include desktop-only;
+  }
 }
