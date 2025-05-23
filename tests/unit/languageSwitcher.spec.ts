@@ -9,7 +9,7 @@ const languages = [
 describe("LanguageSwitcher.vue", () => {
   it("renders all language options", () => {
     const wrapper = mount(LanguageSwitcher, {
-      propsData: { languages },
+      propsData: { languages, active: "en" },
     });
     const btns = wrapper.findAll(".languageSwitcher__options__btn");
     expect(btns.length).toBe(languages.length);
@@ -22,7 +22,7 @@ describe("LanguageSwitcher.vue", () => {
 
   it("emits change-language event with correct code on click", async () => {
     const wrapper = mount(LanguageSwitcher, {
-      propsData: { languages },
+      propsData: { languages, active: "en" },
     });
     const btns = wrapper.findAll(".languageSwitcher__options__btn");
     await btns.at(1)!.trigger("click");
@@ -30,5 +30,15 @@ describe("LanguageSwitcher.vue", () => {
     expect(wrapper.emitted("change-language")?.[0]).toEqual([
       languages[1].code,
     ]);
+  });
+
+  it("adds active class to the selected language", async () => {
+    const wrapper = mount(LanguageSwitcher, {
+      propsData: { languages, active: "en" },
+    });
+    const btns = wrapper.findAll(".languageSwitcher__options__btn");
+
+    expect(btns.at(0)!.classes()).toContain("active");
+    expect(btns.at(1)!.classes()).not.toContain("active");
   });
 });
