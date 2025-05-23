@@ -11,3 +11,19 @@ $font-size-title: 24px;
 $line-height-title: 1.2;
 $text-color-primary: $color-black;
 $text-color-secondary: $color-white;
+// Spacing variables
+$space-x: 4px;
+$space-x2: calc($space-x * 2);
+$space-x3: calc($space-x * 3);
+$space-x4: calc($space-x * 4);
+$space-x5: calc($space-x * 5);
+$space-x6: calc($space-x * 6);
+$space-x7: calc($space-x * 7);
+$space-x8: calc($space-x * 8);
+$space-x9: calc($space-x * 9);
+$space-x10: calc($space-x * 10);
+// Radius variables
+$radius-base: 4px;
+$radius-lg: 8px;
+$radius-xl: 12px;
+$radius-full: 50%;

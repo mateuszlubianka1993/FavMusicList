@@ -1,0 +1,7 @@
+.header {
+    @include flex-space-between;
+    padding: $space-x3 $space-x4;
+  &__logo {
+    @include flex-center;
+  }
+}
