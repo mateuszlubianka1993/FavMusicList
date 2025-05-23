@@ -1,0 +1,13 @@
+.languageSwitcher {
+  @include flex-center;
+  &__options {
+    @include flex-center;
+    gap: $space-x3;
+    &__btn {
+      border-radius: $radius-full;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
