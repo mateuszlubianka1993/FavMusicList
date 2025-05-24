@@ -11,7 +11,7 @@ $color-gray-200: #999;
 $font-family-base: 'Inter', sans-serif;
 $font-weight-normal: 400;
 $font-weight-semibold: 600;
-$font-size-base: 14px;
+$font-size-base: 16px;
 $line-height-base: 1.5;
 $font-size-title: 18px;
 $line-height-title: 1.2;
@@ -32,6 +32,7 @@ $space-x10: calc($space-x * 10);
 $radius-base: 4px;
 $radius-lg: 8px;
 $radius-xl: 12px;
+$radius-xxl: 16px;
 $radius-full: 50%;
 // Breakpoints variables
 $breakpoint-sm: 576px;

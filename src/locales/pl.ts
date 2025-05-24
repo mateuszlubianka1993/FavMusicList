@@ -3,6 +3,12 @@ const pl = {
   addAlbum: "Dodaj album",
   title: "Tytuł",
   albumNameRequired: "Nazwa albumu jest wymagana",
+  sortLabel: "Posortowane po: ",
+  sortOptions: {
+    id: "id",
+    name: "nazwa",
+    date: "data",
+  },
 };
 
 export default pl;
