@@ -2,8 +2,8 @@
   <div id="app" class="app">
     <Header />
     <div class="container">
-      <AlbumFormToggle />
-      <AlbumList :albums="fakeAlbums" />
+      <AlbumFormToggle @add="addAlbum" />
+      <AlbumList :albums="albums" />
     </div>
   </div>
 </template>
@@ -22,19 +22,33 @@ export default {
   },
   data() {
     return {
-      fakeAlbums: [
-        {
-          id: 1,
-          name: "Alum First",
-          date: "12.12.2012",
-        },
-        {
-          id: 2,
-          name: "Alum Second",
-          date: "12.12.2012",
-        },
-      ],
+      albums: [],
     };
+  },
+  mounted() {
+    this.loadAlbums();
+  },
+  methods: {
+    addAlbum(name) {
+      const newAlbum = {
+        id: Date.now(),
+        name,
+        date: new Date().toLocaleDateString(),
+        bestOfTheBest: false,
+      };
+
+      this.albums.push(newAlbum);
+      this.saveAlbums();
+    },
+    saveAlbums() {
+      localStorage.setItem("albums", JSON.stringify(this.albums));
+    },
+    loadAlbums() {
+      const savedAlbums = localStorage.getItem("albums");
+      if (savedAlbums) {
+        this.albums = JSON.parse(savedAlbums);
+      }
+    },
   },
 };
 </script>
