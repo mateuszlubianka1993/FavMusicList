@@ -1,0 +1,40 @@
+.toggleContent {
+  background-color: $color-white;
+  padding-left: $space-x6;
+  padding-bottom: $space-x3;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: $space-x2;
+
+    .closeIcon {
+      cursor: pointer;
+    }
+  }
+
+  &--mobile {
+    background-color: transparent;
+    padding: 0;
+
+    &--header {
+      position: relative;
+      height: $space-x8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-block: $space-x4;
+
+      .closeIcon {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .title {
+        text-align: center;
+      }
+    }
+  }
+}

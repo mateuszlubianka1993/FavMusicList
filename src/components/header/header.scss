@@ -1,6 +1,8 @@
 .header {
     @include flex-space-between;
     padding: $space-x3 $space-x4;
+    max-width: 1320px;
+    margin: 0 auto;
   &__logo {
     @include flex-center;
   }

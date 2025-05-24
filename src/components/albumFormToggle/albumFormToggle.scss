@@ -1,0 +1,9 @@
+.albumFormToggle {
+  padding-top: $space-x4;
+
+  &__button {
+    @include flex-center;
+    gap: $space-x2;
+    font-size: $font-size-title;
+  }
+}
