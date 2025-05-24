@@ -1,0 +1,21 @@
+.input {
+  padding: $space-x3 $space-x4;
+  border: 2px solid #ccc;
+  border-radius: $radius-base;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:focus {
+    border-color: $color-primary;
+    outline: none;
+  }
+
+    &--error {
+        border-color: $color-error;
+    }
+}
+
+.errorMsg {
+    color: $color-error;
+}

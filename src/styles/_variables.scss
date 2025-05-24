@@ -2,14 +2,17 @@
 $color-black: #000;
 $color-white: #fff;
 $color-blue-100: #473ADC;
+$color-primary: $color-blue-100;
 $color-active: $color-blue-100;
+$color-error: #FF4D4F;
+$color-gray-100: #ccc;
 // Font variables
 $font-family-base: 'Inter', sans-serif;
 $font-weight-normal: 400;
 $font-weight-semibold: 600;
-$font-size-base: 16px;
+$font-size-base: 14px;
 $line-height-base: 1.5;
-$font-size-title: 24px;
+$font-size-title: 18px;
 $line-height-title: 1.2;
 $text-color-primary: $color-black;
 $text-color-secondary: $color-white;
@@ -29,8 +32,11 @@ $radius-base: 4px;
 $radius-lg: 8px;
 $radius-xl: 12px;
 $radius-full: 50%;
-// Breakpoints
+// Breakpoints variables
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
+// Grid variables
+$container-max-width: 1200px;
+$grid-padding: $space-x4;
