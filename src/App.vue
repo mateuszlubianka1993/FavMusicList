@@ -3,7 +3,7 @@
     <Header />
     <div class="container">
       <AlbumFormToggle @add="addAlbum" />
-      <AlbumList :albums="albums" />
+      <AlbumList :albums="albums" @remove="removeAlbum" />
     </div>
   </div>
 </template>
@@ -48,6 +48,10 @@ export default {
       if (savedAlbums) {
         this.albums = JSON.parse(savedAlbums);
       }
+    },
+    removeAlbum(id) {
+      this.albums = this.albums.filter((album) => album.id !== id);
+      this.saveAlbums();
     },
   },
 };
