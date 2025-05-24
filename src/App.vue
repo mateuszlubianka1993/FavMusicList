@@ -3,7 +3,11 @@
     <Header />
     <div class="container">
       <AlbumFormToggle @add="addAlbum" />
-      <AlbumList :albums="albums" @remove="removeAlbum" />
+      <AlbumList
+        :albums="albums"
+        @remove="removeAlbum"
+        @toggleBest="toggleBest"
+      />
     </div>
   </div>
 </template>
@@ -52,6 +56,13 @@ export default {
     removeAlbum(id) {
       this.albums = this.albums.filter((album) => album.id !== id);
       this.saveAlbums();
+    },
+    toggleBest(id) {
+      const album = this.albums.find((album) => album.id === id);
+      if (album) {
+        album.bestOfTheBest = !album.bestOfTheBest;
+        this.saveAlbums();
+      }
     },
   },
 };

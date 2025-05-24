@@ -5,7 +5,9 @@
         v-for="album in albums"
         :key="album.id"
         :name="album.name"
+        :liked="album.bestOfTheBest"
         @remove="$emit('remove', album.id)"
+        @toggleBest="$emit('toggleBest', album.id)"
       />
     </transition-group>
   </div>
