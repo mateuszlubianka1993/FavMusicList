@@ -34,4 +34,25 @@
       }
     }
   }
+
+  &--grid {
+    aspect-ratio: 1 / 1;
+    display: block;
+    position: relative;
+    padding: $space-x;
+
+    .albumListItem__title {
+        text-align: center;
+    }
+
+    .albumListItem__actions {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: $space-x3;
+    }
+  }
 }

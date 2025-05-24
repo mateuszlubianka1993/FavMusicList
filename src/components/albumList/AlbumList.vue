@@ -3,14 +3,22 @@
     <AlbumControls
       :sortConfig="sortConfig"
       :selectedSort="sortBy"
+      :viewMode="viewMode"
       @update:selectedSort="sortBy = $event"
+      @update:viewMode="viewMode = $event"
     />
-    <transition-group name="list" v-if="showList" class="albumList__content">
+    <transition-group
+      name="list"
+      v-if="showList"
+      class="albumList__content"
+      :class="`albumList__content--${viewMode}`"
+    >
       <AlbumListItem
         v-for="album in sortedAlbums"
         :key="album.id"
         :name="album.name"
         :liked="album.bestOfTheBest"
+        :isGrid="viewMode === viewConfig.GRID"
         @remove="$emit('remove', album.id)"
         @toggleBest="$emit('toggleBest', album.id)"
       />
@@ -22,6 +30,7 @@
 import AlbumControls from "@/components/albumControls/AlbumControls.vue";
 import AlbumListItem from "@/components/albumList/AlbumListItem.vue";
 import { SORT_CONFIG } from "@/lib/constants/sorting.constants";
+import { VIEW_MODE } from "@/lib/constants/view.constants";
 
 export default {
   name: "AlbumList",
@@ -38,6 +47,8 @@ export default {
   data() {
     return {
       sortBy: SORT_CONFIG.ID,
+      viewConfig: VIEW_MODE,
+      viewMode: VIEW_MODE.LIST,
     };
   },
   computed: {
