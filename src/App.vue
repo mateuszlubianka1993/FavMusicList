@@ -37,7 +37,7 @@ export default {
       const newAlbum = {
         id: Date.now(),
         name,
-        date: new Date().toLocaleDateString(),
+        date: new Date().toISOString(),
         bestOfTheBest: false,
       };
 
