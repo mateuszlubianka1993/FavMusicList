@@ -33,15 +33,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.albumList {
-  border-top: 2px solid $color-gray-200;
-  margin-top: $space-x8;
-  padding-top: $space-x8;
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    gap: $space-x2;
-  }
-}
+@import "./albumList.scss";
 </style>

@@ -74,7 +74,7 @@ export default {
       this.showForm = false;
     },
     handleFormSubmit(albumName) {
-      console.log("Album Name:", albumName);
+      this.$emit("add", albumName);
       this.closeForm();
     },
   },

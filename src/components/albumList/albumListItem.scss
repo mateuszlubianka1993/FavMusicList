@@ -1,0 +1,31 @@
+.albumListItem {
+  border: 1px solid $color-gray-100;
+  border-radius: $radius-base;
+  padding: $space-x4;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+
+  &__title {
+    font-size: $font-size-title;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $space-x4;
+
+    &--btn {
+      max-height: $space-x6;
+      @include flex-center;
+      cursor: pointer;
+      transition: all 0.3s ease-in;
+
+      &:hover {
+        img {
+          filter: brightness(0) saturate(100%);
+        }
+      }
+    }
+  }
+}
