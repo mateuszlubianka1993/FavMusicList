@@ -26,6 +26,12 @@
           filter: brightness(0) saturate(100%);
         }
       }
+
+      &--liked {
+        img {
+            filter: brightness(0) saturate(100%) invert(39%) sepia(76%) saturate(581%) hue-rotate(195deg) brightness(82%) contrast(102%);
+        }
+      }
     }
   }
 }

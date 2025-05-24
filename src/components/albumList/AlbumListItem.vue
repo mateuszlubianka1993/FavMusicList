@@ -4,8 +4,15 @@
       {{ name }}
     </p>
     <div class="albumListItem__actions">
-      <div class="albumListItem__actions--btn">
-        <img :src="likeIcon" alt="Add to favourites icon" />
+      <div
+        class="albumListItem__actions--btn"
+        :class="{ 'albumListItem__actions--btn--liked': liked }"
+      >
+        <img
+          :src="likeIcon"
+          alt="Add to favourites icon"
+          @click="$emit('toggleBest')"
+        />
       </div>
       <div class="albumListItem__actions--btn" @click="$emit('remove')">
         <img :src="removeIcon" alt="Remove icon" />
@@ -24,6 +31,10 @@ export default {
     name: {
       type: String,
       required: true,
+    },
+    liked: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {
