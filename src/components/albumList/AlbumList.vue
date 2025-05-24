@@ -5,6 +5,7 @@
         v-for="album in albums"
         :key="album.id"
         :name="album.name"
+        @remove="$emit('remove', album.id)"
       />
     </transition-group>
   </div>

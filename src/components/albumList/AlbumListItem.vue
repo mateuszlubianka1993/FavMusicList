@@ -7,7 +7,7 @@
       <div class="albumListItem__actions--btn">
         <img :src="likeIcon" alt="Add to favourites icon" />
       </div>
-      <div class="albumListItem__actions--btn">
+      <div class="albumListItem__actions--btn" @click="$emit('remove')">
         <img :src="removeIcon" alt="Remove icon" />
       </div>
     </div>
