@@ -18,11 +18,34 @@
         </ul>
       </div>
     </div>
+    <div class="albumControls__viewMode">
+      <div class="albumControls__viewMode--btn">
+        <img
+          :src="viewMode === views.LIST ? listBlackIcon : listGrayIcon"
+          alt="List view icon"
+          class="view-icon"
+          @click="$emit('update:viewMode', views.LIST)"
+        />
+      </div>
+      <div class="albumControls__viewMode--btn">
+        <img
+          :src="viewMode === views.GRID ? gridBlackIcon : gridGrayIcon"
+          alt="Grid view icon"
+          class="view-icon"
+          @click="$emit('update:viewMode', views.GRID)"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import arrowIcon from "@/assets/icons/Arrow.svg";
+import gridGrayIcon from "@/assets/icons/grid-gray.svg";
+import gridBlackIcon from "@/assets/icons/grid-black.svg";
+import listGrayIcon from "@/assets/icons/list-gray.svg";
+import listBlackIcon from "@/assets/icons/list-black.svg";
+import { VIEW_MODE } from "@/lib/constants/view.constants";
 
 export default {
   name: "AlbumControls",
@@ -35,10 +58,19 @@ export default {
       type: String,
       required: true,
     },
+    viewMode: {
+      type: String,
+      default: "list",
+    },
   },
   data() {
     return {
       arrowIcon,
+      gridGrayIcon,
+      gridBlackIcon,
+      listGrayIcon,
+      listBlackIcon,
+      views: VIEW_MODE,
       isOpen: false,
     };
   },
@@ -64,6 +96,8 @@ export default {
 <style lang="scss" scoped>
 .albumControls {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: $space-x6;
 
   &__sorting {
@@ -104,6 +138,16 @@ export default {
           }
         }
       }
+    }
+  }
+
+  &__viewMode {
+    display: flex;
+    align-items: center;
+    gap: $space-x3;
+
+    &--btn {
+      cursor: pointer;
     }
   }
 }

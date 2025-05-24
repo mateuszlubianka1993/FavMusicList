@@ -1,5 +1,5 @@
 <template>
-  <div class="albumListItem">
+  <div class="albumListItem" :class="{ 'albumListItem--grid': isGrid }">
     <p class="albumListItem__title">
       {{ name }}
     </p>
@@ -33,6 +33,10 @@ export default {
       required: true,
     },
     liked: {
+      type: Boolean,
+      default: false,
+    },
+    isGrid: {
       type: Boolean,
       default: false,
     },
