@@ -7,11 +7,27 @@
       border-radius: $radius-full;
       padding: $space-x;
       @include flex-center;
+
       &:hover {
         cursor: pointer;
       }
+
       &.active {
         box-shadow: 0 0 0 2px $color-active;
+      }
+
+      .lang-img {
+        &--small {
+          height: $space-x5;
+        }
+
+        &--medium {
+          height: $space-x7;
+        }
+
+        &--large {
+          height: $space-x8;
+        }
       }
     }
   }

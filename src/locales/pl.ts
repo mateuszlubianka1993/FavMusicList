@@ -3,7 +3,7 @@ const pl = {
   addAlbum: "Dodaj album",
   title: "Tytuł",
   albumNameRequired: "Nazwa albumu jest wymagana",
-  sortLabel: "Posortowane po: ",
+  sortLabel: "Sortowanie: ",
   sortOptions: {
     id: "id",
     name: "nazwa",

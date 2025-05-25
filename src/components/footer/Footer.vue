@@ -1,32 +1,28 @@
 <template>
-  <header class="header">
-    <div class="header__logo">
-      <img :src="logo" alt="logo" />
-    </div>
-    <div class="header__languageSwitcher">
-      <LanguageSwitcher
-        :languages="languagesConfig"
-        :active="currentLanguage"
-        @change-language="onLanguageChange"
-      />
-    </div>
-  </header>
+  <footer class="footer">
+    <LanguageSwitcher
+      :languages="languagesConfig"
+      :active="currentLanguage"
+      :size="size"
+      @change-language="onLanguageChange"
+    />
+  </footer>
 </template>
 
 <script>
 import LanguageSwitcher from "@/components/languageSwitcher/LanguageSwitcher.vue";
-import logo from "@/assets/Logo.png";
 import { LANGUAGES } from "@/lib/constants/languages.constants";
+import { SIZES } from "@/lib/constants/ui.constants";
 
 export default {
-  name: "Header",
+  name: "Footer",
   components: {
     LanguageSwitcher,
   },
   data() {
     return {
-      logo,
       languagesConfig: LANGUAGES,
+      size: SIZES.MEDIUM,
     };
   },
   methods: {
@@ -43,5 +39,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./header.scss";
+@import "./footer.scss";
 </style>
