@@ -1,0 +1,44 @@
+// Color variables
+$color-black: #000;
+$color-white: #fff;
+$color-blue-100: #473ADC;
+$color-primary: $color-blue-100;
+$color-active: $color-blue-100;
+$color-error: #FF4D4F;
+$color-gray-100: #ccc;
+$color-gray-200: #999;
+// Font variables
+$font-family-base: 'Inter', sans-serif;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-size-base: 16px;
+$line-height-base: 1.5;
+$font-size-title: 18px;
+$line-height-title: 1.2;
+$text-color-primary: $color-black;
+$text-color-secondary: $color-white;
+// Spacing variables
+$space-x: 4px;
+$space-x2: calc($space-x * 2);
+$space-x3: calc($space-x * 3);
+$space-x4: calc($space-x * 4);
+$space-x5: calc($space-x * 5);
+$space-x6: calc($space-x * 6);
+$space-x7: calc($space-x * 7);
+$space-x8: calc($space-x * 8);
+$space-x9: calc($space-x * 9);
+$space-x10: calc($space-x * 10);
+// Radius variables
+$radius-base: 4px;
+$radius-lg: 8px;
+$radius-xl: 12px;
+$radius-xxl: 16px;
+$radius-full: 50%;
+// Breakpoints variables
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+// Grid variables
+$container-max-width: 1200px;
+$grid-padding: $space-x4;

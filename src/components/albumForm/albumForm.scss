@@ -1,0 +1,9 @@
+.albumForm {
+  display: flex;
+  flex-direction: column;
+  gap: $space-x3;
+
+  &__btn {
+    font-size: $font-size-title;
+  }
+}

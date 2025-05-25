@@ -1,0 +1,13 @@
+body {
+    font-family: $font-family-base;
+    font-weight: $font-weight-normal;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $text-color-primary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-base;
+    font-size: $font-size-title;
+    line-height: $line-height-title;
+}
