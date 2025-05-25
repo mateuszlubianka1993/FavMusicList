@@ -8,13 +8,20 @@
         :class="{ active: lang.code === active }"
         @click="$emit('change-language', lang.code)"
       >
-        <img :src="lang.flag" :alt="lang.label" class="lang-img" />
+        <img
+          :src="lang.flag"
+          :alt="lang.label"
+          class="lang-img"
+          :class="`lang-img--${size}`"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { SIZES } from "@/lib/constants/ui.constants";
+
 export default {
   name: "LanguageSwitcher",
   props: {
@@ -25,6 +32,10 @@ export default {
     active: {
       type: String,
       required: true,
+    },
+    size: {
+      type: String,
+      default: SIZES.SMALL,
     },
   },
 };

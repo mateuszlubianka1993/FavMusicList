@@ -3,3 +3,9 @@ export const BUTTON_COLORS = {
   SECONDARY: "secondary",
   DARK: "dark",
 };
+
+export const SIZES = {
+  SMALL: "small",
+  MEDIUM: "medium",
+  LARGE: "large",
+};
